@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_smlarge"
+                android:padding="9dp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sign Up"
+                    android:id="@+id/signup"
+                    android:fontFamily="@font/latobold"
+                    android:textSize="20sp"
+                    android:layout_alignParentEnd="true"
+                    android:textColor="@color/green"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/currencytext"
+                    android:layout_marginTop="@dimen/large_margin"
+                    android:layout_below="@+id/signup"
+                    android:textColor="@color/blue"
+                    android:fontFamily="@font/latoextrabold"
+                    android:textSize="40sp"
+                    android:text="Currency"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/calculatortxt"
+                    android:layout_below="@+id/currencytext"
+                    android:textColor="@color/blue"
+                    android:fontFamily="@font/latoextrabold"
+                    android:textSize="40sp"
+                    android:text="Calcultor"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/dot"
+                    android:layout_below="@+id/currencytext"
+                    android:layout_toEndOf="@+id/calculatortxt"
+                    android:textColor="@color/green"
+                    android:fontFamily="@font/latoextrabold"
+                    android:textSize="40sp"
+                    android:text="."/>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/firstNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/latoregular"
+                    android:hint="Enter Number"
+                    android:layout_below="@+id/calculatortxt"
+                    android:inputType="number"
+                    android:background="@drawable/currency_text_bg"
+                    android:maxLines="1"
+                    android:layout_marginTop="@dimen/spacing_smlarge"
+                    android:textColorHint="@color/white"
+                    android:layout_marginBottom="@dimen/spacing_smlarge"/>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/secondNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/latoregular"
+                    android:hint="Enter Number"
+                    android:layout_below="@+id/firstNumber"
+                    android:inputType="number"
+                    android:background="@drawable/currency_text_bg"
+                    android:maxLines="1"
+                    android:textColorHint="@color/white"
+                    android:layout_marginBottom="@dimen/spacing_smlarge"/>
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                    android:layout_width="90dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/first_spinner"
+                    android:layout_below="@+id/secondNumber"/>
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                    android:layout_width="90dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentEnd="true"
+                    android:id="@+id/second_spinner"
+                    android:layout_marginBottom="@dimen/spacing_smlarge"
+                    android:layout_below="@+id/secondNumber"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:text="@string/covert"
+                    android:textSize="@dimen/spacing_smlarge"
+                    android:id="@+id/convert_btn"
+                    android:textColor="@color/white"
+                    android:layout_below="@+id/second_spinner"
+                    android:background="@color/green"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txt"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/convert_btn"
+                    android:layout_marginTop="@dimen/spacing_smlarge"
+                    android:textColor="@color/blue"
+                    android:fontFamily="@font/latoextrabold"
+                    android:textSize="20sp"
+                    android:text="Mid-Market Exchage Rate at"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txt2"
+                    android:layout_centerHorizontal="true"
+                    android:layout_toEndOf="@+id/txt"
+                    android:layout_below="@+id/convert_btn"
+                    android:layout_marginTop="@dimen/spacing_smlarge"
+                    android:textColor="@color/blue"
+                    android:fontFamily="@font/latoextrabold"
+                    android:textSize="20sp"
+                    android:text="UTC"/>
+        </RelativeLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

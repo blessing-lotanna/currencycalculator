@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">CurrencyConverter</string>
+    <string name="covert">Covert</string>
+    <string name="api_key">37fb796212ca7e33b9eeda55e931c74d</string>
+</resources>
